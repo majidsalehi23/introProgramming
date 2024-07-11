@@ -1,0 +1,1346 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "# Testing"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Table of Contents\n",
+    "\n",
+    "- [Introduction](#Introduction)\n",
+    "- [1. Testing](#1.-Testing)\n",
+    "- [2. Checking Arguments](#2.-Checking-Arguments)\n",
+    "- [3. Manual Testing](#3.-Manual-Testing)\n",
+    "- [4. Function Testing Guidelines](#4.-Function-Testing-Guidelines)\n",
+    "- [5. Automated Testing with `doctest`](#5.-Automated-Testing-with-doctest)\n",
+    "- [6. The `assert` Statement](#6.-The-assert-Statement)\n",
+    "- [7. Automated Testing with `pytest`](#7.-Automated-Testing-with-pytest)\n",
+    "- [8. A Development Plan](#8.-A-Development-Plan)\n",
+    "- [9. Incremental Development](#9.-Incremental-Development)\n",
+    "- [10. Interface Design](#10.-Interface-Design)\n",
+    "- [Summary](#Summary)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Introduction\n",
+    "\n",
+    "Testing has proven to be essential when building robust programs. \n",
+    "Although it cannot guarantee that your program is correct, it already increases your confidence that your code behaves as expected (if your test cases pass).\n",
+    "Moreover, it supports the evolution and maintainability of your software, in the sense that if you modify or introduce new code, previous functionality will be tested in the form of a regression test.\n",
+    "However, keeping tests up to date and wiring your code with this auxiliary testing code is not trivial.\n",
+    "To solve this issue, there is a plethora of software tools that can be of great help.\n",
+    "In this chapter, we mention two: `doctest` and `pytest`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "## 1. Testing\n",
+    "\n",
+    "**Testing** is a way of convincing yourself that the implementation of the function is correct. \n",
+    "Testing is not equivalent to giving a formal proof or checking the correcteness of your program.\n",
+    "Actually, testing will not give you any hints on the absence of errors, it will only give you clues about the existence of errors under the cases you have considered.\n",
+    "\n",
+    "Whenever you have defined a variable or a function, **verify** it, _before_ using it. \n",
+    "Do not rely on them blindly.\n",
+    "\n",
+    "- In case of a **variable**, inspect\n",
+    "    - type and \n",
+    "    - value.\n",
+    "- In case of a **function**:\n",
+    "    - choose a set of interesting arguments (e.g., regular, border cases);\n",
+    "    - apply the function to such arguments and gather the results, and;\n",
+    "    - decide on pass or fail.\n",
+    "    \n",
+    "<div class=\"alert alert-info\">\n",
+    "    <b>Testing code in Jupyter notebooks</b><br>\n",
+    "    When testing code in a Jupyter notebook, keep such test code close to the code you are testing, so that you can rerun it and use it as a kind of documentation.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    },
+    "tags": []
+   },
+   "source": [
+    "## 2. Checking Arguments\n",
+    "\n",
+    "When calling a function, we have to ensure the arguments that we pass to the function are *correct*.\n",
+    "Therefore, it is necessary to write auxiliary code to perform some checking on the arguments,\n",
+    "to validate that the given argument does not lead to unwanted behaviour.\n",
+    "\n",
+    "In the following example, we define a `countdown` function.\n",
+    "This function gets a number as argument (`nr`) and in every iteration, it prints its value and decreases it by `1`.\n",
+    "The loop terminates once the number is equal to `0`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def countdown(nr: int) -> None:\n",
+    "    \"\"\"\n",
+    "    Prints numbers in a decreasing order.\n",
+    "    :param nr: starting countdown number\n",
+    "    \"\"\"\n",
+    "    while nr != 0:\n",
+    "        print(nr)\n",
+    "        nr -= 1\n",
+    "    print('Done!')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "countdown(15)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "countdown(-15)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "countdown(1.5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "It looks like an infinite computation. How can that be? The function has a condition—when \n",
+    "`n != 0`. \n",
+    "But if `n` is not an integer or if it is negative, the condition will never be met!\n",
+    "From there, it gets smaller (more negative), but it will never be 0.\n",
+    "\n",
+    "We can solve this problem by checking the argument passed to the `countdown` function is a positive integer. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "def countdown(nr: int) -> None:\n",
+    "    \"\"\"\n",
+    "    Prints numbers in a decreasing order.\n",
+    "    :param nr: starting countdown number\n",
+    "    \"\"\"\n",
+    "    if not isinstance(nr, int):  # Check that the nr argument is an integer\n",
+    "        print('countdown is only defined for integers.')\n",
+    "    elif nr < 0:                 # Check that the nr argument is positive\n",
+    "        print('countdown is not defined for negative integers.')\n",
+    "    else:                        # If the two conditions are met proceed with the loop\n",
+    "        while (nr != 0):\n",
+    "            print(nr)\n",
+    "            nr -= 1\n",
+    "        print('Done!')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "countdown(-1.5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "The first condition handles non-integers; the second handles negative integers. In both\n",
+    "conditions, the program prints an error message to indicate that something\n",
+    "went wrong.\n",
+    "This program demonstrates the guarding pattern. The first two conditionals\n",
+    "act as guardians, protecting the code that follows from values that might cause an\n",
+    "error. \n",
+    "The guardians make it possible to prove the correctness of the code."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "## 3. Manual Testing\n",
+    "\n",
+    "When thinking about functions, a simple but rather labor-intensive way of testing is manual testing. \n",
+    "You write in one cell the function body and in a few following cells, the various tests for the function. \n",
+    "\n",
+    "When testing, you have to consider **corner cases**, for instance, empty sequences like strings, the elements at the first or last index of a sequence, among others.\n",
+    "To perform the manual testing of your function, follow the steps below:\n",
+    "\n",
+    "1. Choose interesting arguments.\n",
+    "1. Call the function for various arguments in a code cell, such that it shows some result (either via `print` or as the last expression in a code cell).\n",
+    "1. Visually, check those results.\n",
+    "\n",
+    "The combination of the function call plus your chosen arguments is what we call a **test case**.\n",
+    "\n",
+    "Let us see an example with the `roll_dice` function."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "\n",
+    "def roll_dice(n: int) -> str:\n",
+    "    \"\"\"\n",
+    "    Rolls a dice n times.\n",
+    "    Assumption: n is an integer and n >= 0.\n",
+    "    \n",
+    "    :param n: number of times to roll the dice\n",
+    "    :returns: a string with the dice number per round (an integer value between 1 and 6).\n",
+    "    \"\"\"\n",
+    "    rolls: str = ''\n",
+    "    \n",
+    "    for i in range(n):\n",
+    "        rolls += str(random.randint(1, 6))\n",
+    "    \n",
+    "    return rolls"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Test case 1: Boundary case (n == 0)\n",
+    "# Expected output: ''\n",
+    "roll_dice(0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Test case 2: Boundary case (n == 100)\n",
+    "# Expected output: string with 100 numbers, each one with a value between 1 and 6\n",
+    "roll_dice(100)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Test case 3: Check the length of the resulting string\n",
+    "# Expected output: the length should be equal to the argument\n",
+    "len(roll_dice(3))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Test case 4: Check whether all rolls are valid\n",
+    "rolls_valid: bool = True\n",
+    "\n",
+    "for roll in roll_dice(10):\n",
+    "    valid: bool = int(roll) in range(1, 6 + 1)\n",
+    "    if not valid:\n",
+    "        rolls_valid = False\n",
+    "        break\n",
+    "    print(f'{roll} in [1, 6]: {valid}')\n",
+    "    \n",
+    "rolls_valid"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "jp-MarkdownHeadingCollapsed": true,
+    "tags": []
+   },
+   "source": [
+    "## 4. Function Testing Guidelines\n",
+    "\n",
+    "The challenge with function testing is to convince yourself that you have dealt with all possible cases that the function needs to handle.\n",
+    "\n",
+    "* Testing a function in just one call is hardly ever enough.\n",
+    "* Pick a _few_ _important_ arguments, for which you can check the corresponding result.\n",
+    "* Boundary cases, and small typical case\n",
+    "    * Strive for **code coverage**\n",
+    "    * Code that is not executed during the call, is not tested\n",
+    "    * Cover all branches of `if-elif-else`\n",
+    "* You do not need to check the result directly; could test it indirectly by verifying its properties. For instance, by checking the number of elements in a sequence instead of inspecting the sequence.\n",
+    "\n",
+    "Suppose you need to write a function that concatenates two strings. \n",
+    "A sufficient test can be to check whether the length of the resulting string is the same as the length of both string arguments."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    },
+    "tags": []
+   },
+   "source": [
+    "## 5. Automated Testing with `doctest`\n",
+    "\n",
+    "A more robust way of testing is by using automated testing tools such as `doctest`. \n",
+    "`doctest` allows you to add **usage examples** to the function docstring.\n",
+    "\n",
+    "Below you will find the format of test cases used by `doctest` within your docstring.\n",
+    "\n",
+    "```\n",
+    ">>> expression with the function call and arguments\n",
+    "expected result\n",
+    "...\n",
+    "...\n",
+    ">>> expression with the function call and arguments\n",
+    "expected result\n",
+    "```\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    <b>About the expected result in <code>doctest</code></b><br>\n",
+    "    Notice that the <b>expected result</b> is treated as a string that should match the string representation you get by the Python interpreter after running your code.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "\n",
+    "def roll_dice(n: int) -> str:\n",
+    "    \"\"\"\n",
+    "    Rolls a dice n times.\n",
+    "    Assumption: n is an integer and n >= 0.\n",
+    "    \n",
+    "    :param n: number of times to roll the dice\n",
+    "    :returns: a string with the dice number per round (an integer value between 1 and 6).\n",
+    "    \n",
+    "    Examples and test cases:\n",
+    "    >>> roll_dice(0)                                                 # Test case 1: Boundary case (n == 0)\n",
+    "    ''\n",
+    "    >>> len(roll_dice(3))                                            # Test case 2: Check the length of the resulting string\n",
+    "    3\n",
+    "    >>> all(int(roll) in range(1, 6 + 1) for roll in roll_dice(10))  # Test case 3: Check whether all rolls are valid\n",
+    "    True\n",
+    "    \"\"\"\n",
+    "    rolls: str = ''\n",
+    "    \n",
+    "    for i in range(n):\n",
+    "        rolls += str(random.randint(1, 6))\n",
+    "    \n",
+    "    return rolls"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "### Running `doctests` for One Function\n",
+    "\n",
+    "First, import the `doctest` module."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import doctest"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Second, invoke the `run_docstring_examples` function. This function **requires two arguments**:\n",
+    "- **`f`:** can be a function, module, or class.\n",
+    "- **`globs`:** a dictionary of arguments used for the execution context. We usually invoke the `globals()` function and we pass it as argument.\n",
+    "\n",
+    "\n",
+    "Additionally, you can pass other **optional keyword parameters**. In this chapter, we care about two:\n",
+    "- **`verbose=False`:** returns an output only for the failing test cases. If set to `True` the function will return an output even for the passing cases. The default value is `False`.\n",
+    "- **`name='NoName'`:** used in failure messages. We usually set this value to the name of `f` so we can easily identify where we got the error. The default value is `NoName`.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    <b>The <code>run_docstring_examples</code> function</b><br>\n",
+    "    If you want to learn more about the <code>run_docstring_examples</code> function, visit <a href=https://docs.python.org/3/library/doctest.html#doctest.run_docstring_examples>this link</a>.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "doctest.run_docstring_examples(roll_dice, globals(), verbose=True, name='roll_dice')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Same example with `verbose` set to `False`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "doctest.run_docstring_examples(roll_dice, globals(), verbose=False, name='roll_dice')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Same example without specifying the `name`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "doctest.run_docstring_examples(roll_dice, globals())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "One more example of tests in docstring:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def find(word: str, letter: str) -> int:\n",
+    "    \"\"\"\n",
+    "    Finds at which position the letter appears first. If the letter does \n",
+    "    not appear in the string -1 is returned.\n",
+    "    :param word: base word\n",
+    "    :param letter: letter to find\n",
+    "    :returns: position of the letter within the word.\n",
+    "    \n",
+    "    Examples and test cases:\n",
+    "    >>> isinstance(find('', 'a'), int)  # Test case 1: Check type of find\n",
+    "    True\n",
+    "    >>> find('', 'a')                   # Test case 2: Boundary case (empty string)\n",
+    "    -1\n",
+    "    >>> find('aa', 'a')                 # Test case 3: Boundary case (first position)\n",
+    "    0\n",
+    "    >>> find('bbbba', 'a')              # Test case 4: Boundary case (last position)\n",
+    "    4\n",
+    "    >>> find('bbbbaabbbb', 'a')         # Test case 5: Regular case\n",
+    "    4\n",
+    "    \"\"\"\n",
+    "    index: int = 0\n",
+    "    \n",
+    "    while index < len(word):\n",
+    "        if word[index] == letter:\n",
+    "            return index\n",
+    "        index += 1\n",
+    "        \n",
+    "    return -1\n",
+    "\n",
+    "find('data science', 'a')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "doctest.run_docstring_examples(find, globals(), verbose=True, name='find')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "### Running `doctests` for All Functions\n",
+    "\n",
+    "The `doctest` module also offers the `testmod` function to run test cases for all functions with docstring tests.\n",
+    "All the parameters of the function are optional.\n",
+    "In this chapter, we care specifically about one: the `verbose` parameter, which has the same semantics or meaning provided for the `run_docstring_examples` function.\n",
+    "By default, this one is set to `False`. \n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    <b>The <code>testmod</code> function</b><br>\n",
+    "    If you want to learn more about the <code>testmod</code> function, visit <a href=https://docs.python.org/3/library/doctest.html#doctest.testmod>this link</a>.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "doctest.testmod(verbose=True)  # with details"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "doctest.testmod(verbose=False)  # without details"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 6. The `assert` Statement\n",
+    "\n",
+    "An **assertion** is a statement that checks if a boolean expression returns `True`.\n",
+    "If so, the execution of the program continues, otherwise, the program raises an `AssertionError` with an optional error message.\n",
+    "The syntax of the statement looks as follows.\n",
+    "\n",
+    "```python\n",
+    "# First option without message\n",
+    "assert <boolean_condition>\n",
+    "\n",
+    "# Second option with message\n",
+    "assert <boolean_condition>, <error_message>\n",
+    "```\n",
+    "\n",
+    "Assertions are used as a debugging tool and as internal checks within your program to verify that certain preconditions are being met.\n",
+    "**Debugging** is going (stepwise) through the statements to find an error. I is in general very time consuming. \n",
+    "A lightweight way of debugging is adding `print` statements to your code. \n",
+    "Coming back to the topic, assertions are not supposed to be used as a way to communicate with end users, but more as a tool for developers.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    <b>Inform about an error via an exception</b><br>\n",
+    "    If you need to inform the user about a mistake that comes from their side, then you will need to raise an exception.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "For instance, if we go back to the `roll_dice` example, we can use assertions to check if the argument is a positive integer. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "\n",
+    "def roll_dice(n: int) -> str:\n",
+    "    \"\"\"\n",
+    "    Rolls a dice n times.\n",
+    "    Assumption: n is an integer and n >= 0.\n",
+    "    \n",
+    "    :param n: number of times to roll the dice\n",
+    "    :returns: a string with the dice number per round (an integer value between 1 and 6).\n",
+    "    \"\"\"\n",
+    "    assert isinstance(n, int), 'n must be an integer'\n",
+    "    assert n >= 0, 'n must be a positive number'\n",
+    "    \n",
+    "    rolls: str = ''\n",
+    "    \n",
+    "    for i in range(n):\n",
+    "        rolls += str(random.randint(1, 6))\n",
+    "    \n",
+    "    return rolls"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Trigger first assertion error (not an integer)\n",
+    "roll_dice('10')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Trigger second assertion error (negative number)\n",
+    "roll_dice(-10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 7. Automated Testing with `pytest`\n",
+    "\n",
+    "[`pytest`](https://docs.pytest.org/en/7.1.x/index.html) is a Python testing framework that supports the creation of more robust tests and speeds up the testing process by providing boilerplate code that you can reuse for testing purposes.\n",
+    "**Boilerplate code** refers to repetitive and common code used in several parts of your program.\n",
+    "It is usually used when dealing with Python projects but new modules have been developed to integrate them with Jupyter notebooks.\n",
+    "In this chapter, we introduce them so you can have an idea of how to interact with this module, especially when writing Python projects outside of the notebooks environment.\n",
+    "\n",
+    "### Installing `pytest` and `ipytest`\n",
+    "To use `pytest` install the module via Anaconda or the terminal with the command `pip install pytest`.\n",
+    "To use it in combination with Jupyter notebooks, you will need also to install the `ipytest` module in the same way you did it with `pytest`.\n",
+    "[`ipytest`](https://github.com/chmp/ipytest) is a library that supports the execution of `pytest` in the Jupyter Notebook environment.\n",
+    "This is an open-source project supported by a small community of developers.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    <b>Risks of some open-source modules</b><br>\n",
+    "    There are some risks attached to the use of open-source modules with a small community behind them:\n",
+    "    <ul>\n",
+    "        <li>Maintenance happens irregularly.</li>\n",
+    "        <li>There is a chance that the project becomes inactive if there is no funding coming in or if the collaborators lose interest.</li>\n",
+    "        <li>Resources are limited, thus the testing and robustness of the project might be affected.</li>\n",
+    "    </ul>\n",
+    "</div>\n",
+    "\n",
+    "Given the current maturity of the tools, you need to be careful when testing your code in a Jupyter notebook with `pytetst`.\n",
+    "`pytest` is a robust library but the wrappers that connect it with the Jupyter Notebook environment might need some more time to mature.\n",
+    "The ideal setting to use `pytest` is during the development of stand-alone Python projects."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Creating the Test Cases\n",
+    "\n",
+    "To create test cases with `pytest` you just need to define a new function that starts with the name \"test_\".\n",
+    "You need to pick your own conventions to name the test case after the prefix we have provided.\n",
+    "\n",
+    "Let us go back to the `find` example and translate our `doctest` cases into `pytest` cases."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def find(word: str, letter: str) -> int:\n",
+    "    \"\"\"\n",
+    "    Finds at which position the letter appears first. If the letter does \n",
+    "    not appear in the string -1 is returned.\n",
+    "    :param word: base word\n",
+    "    :param letter: letter to find\n",
+    "    :returns: position of the letter within the word.\n",
+    "    \"\"\"\n",
+    "    index: int = 0\n",
+    "    \n",
+    "    while index < len(word):\n",
+    "        if word[index] == letter:\n",
+    "            return index\n",
+    "        index += 1\n",
+    "        \n",
+    "    return -1\n",
+    "\n",
+    "find('data science', 'a')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Below you will find our test cases.\n",
+    "The convention we picked to name them is as follows: `test_<function>_<test_case>`.\n",
+    "Notice that to perform the checks, we use the `assert` statement!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def test_find_check_type() -> None:\n",
+    "    assert isinstance(find('', 'a'), int), \\\n",
+    "    'The return type of `find` must be an integer'\n",
+    "    \n",
+    "def test_find_empty_string() -> None:\n",
+    "    assert find('', 'a') == -1, \\\n",
+    "    '`find` does not return -1 when passing an empty string as parameter'\n",
+    "    \n",
+    "def test_find_first_position() -> None:\n",
+    "    assert find('aa', 'a') == 0, \\\n",
+    "    '`find` does not return the index of the first appearance of the letter'\n",
+    "    \n",
+    "def test_find_last_position() -> None:\n",
+    "    assert find('bbbba', 'a') == len('bbbba') - 1, \\\n",
+    "    '`find` does not return the index when the letter is in the last position'\n",
+    "    \n",
+    "def test_find_regular_case() -> None:\n",
+    "    assert find('bbbbaabbbb', 'a') == 4,\\\n",
+    "    '`find` does not return the right index of the letter'"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Running the Test Cases\n",
+    "\n",
+    "To run `pytest` in this Jupyter notebooks, we will need first to import `ipytest` and then invoke the `autoconfig` function.\n",
+    "The latter will configure `ipytest` with default values.\n",
+    "Then, you will be able to invoke the `run` function in charge of executing all tests."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import ipytest\n",
+    "\n",
+    "ipytest.autoconfig()  # Configures ipytest\n",
+    "ipytest.run()         # Runs all tests within the notebook"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Working with Fixtures\n",
+    "\n",
+    "If you want to save certain values and avoid invoking the same functions with the same arguments, you can create *fixtures*.\n",
+    "**Fixtures** are functions that create data or initialize the state of a program.\n",
+    "Tests can use fixtures to avoid duplicating code!\n",
+    "To use them, test functions need to explicitly refer to them, and pass the fixture function as an argument!\n",
+    "The syntax is as follows:\n",
+    "\n",
+    "```python\n",
+    "import pytest\n",
+    "\n",
+    "@pytest.fixture\n",
+    "def <fixture_name>():\n",
+    "    # Body\n",
+    "    return <value>\n",
+    "\n",
+    "def test_<test_name>(<fixture_name>):\n",
+    "    assert <fixture_name> == ...\n",
+    "```\n",
+    "\n",
+    "Let us modify our `find` tests to see how fixtures work."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pytest\n",
+    "import ipytest\n",
+    "ipytest.clean_tests()\n",
+    "ipytest.autoconfig()\n",
+    "\n",
+    "@pytest.fixture\n",
+    "def regular_case() -> int:\n",
+    "    return find('bbbbaabbbb', 'a')\n",
+    "\n",
+    "\n",
+    "def test_find_check_type(regular_case) -> None:\n",
+    "    assert isinstance(regular_case, int), \\\n",
+    "    'The return type of `find` must be an integer'\n",
+    "\n",
+    "def test_find_regular_case(regular_case) -> None:\n",
+    "    assert regular_case == 4,\\\n",
+    "    '`find` does not return the right index of the letter'\n",
+    "    \n",
+    "ipytest.run()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Notice that if you want to ignore previously ran tests, you need to explicitly invoke the function `clean_tests`, which will remove all tests whose name starts by \"Test\" or \"test\".\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    <b><code>ipytest</code> documentation</b><br>\n",
+    "    If you want to learn more about the <code>ipytest</code> functions, please have a look at the official documentation <a href=https://github.com/chmp/ipytest#ipytestconfig>here</a>.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## 8. A Development Plan\n",
+    "\n",
+    "A development plan is a process for writing programs. \n",
+    "The process we use is “encapsulation and generalization”. \n",
+    "The steps of this process are:\n",
+    "\n",
+    "1. Start by writing a **small program** with no function definitions.\n",
+    "2. Once you get the program working, identify a coherent piece of it, **encapsulate the piece in a function** and give it a name.\n",
+    "3. **Generalize** the function by adding appropriate **parameters**.\n",
+    "4. Repeat steps 1–3 until you have a set of working functions.\n",
+    "5. Look for opportunities to improve the program by **refactoring**. For example, if you have similar code in several places, consider factoring it into an appropriately general function.\n",
+    "\n",
+    "This process has some drawbacks—we will see alternatives later—but it can be useful if you do not know ahead of time how to divide the program into functions. This approach allows you to design your program as you go along."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## 9. Incremental Development\n",
+    "\n",
+    "The larger the program you need to develop the more useful it is to have a structured way of developing it.\n",
+    "There are multiple ways of structuring the development process and in fact your computational thinking. \n",
+    "In particular, we encourage you to identify the **problem**, the **inputs**, **output**, and **algorithm** of your solution.\n",
+    "\n",
+    "An important development paradigm is **divide and conquer**. \n",
+    "You can, for example, try to split the problem into subproblems and solve each subproblem in isolation. This paradigm works for large and complex problems and allows parallel development of a program.\n",
+    "\n",
+    "However, before applying any development paradigm you need to understand the problem. \n",
+    "Critical reading is essential.\n",
+    "Try **making sketches** to visualize the problem and the solution, explain the solution to somebody else, and finally write the code.\n",
+    "\n",
+    "Another paradigm, as advocated by \"Think Python\" is to use **incremental development**.\n",
+    "The idea is not to try to develop a complete program in one go, but to develop it step by step.\n",
+    "Along the way you can write small tests to see whether your program behaves correctly.\n",
+    "Developing a complete program is likely to fail and you will spend a lot of time on debugging."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "\n",
+    "As an example, suppose you want to calculate the volume of a hollow cylinder, so a cylinder with a removed inner cylinder. \n",
+    "The **problem** we need to solve is subtracting the volume of the inner cylinder from the volume of the outer cylinder. \n",
+    "The volume of a cylinder is calculated as $volume = h*\\pi*R^2$.\n",
+    "Can we now mathematical formulate the problem?\n",
+    "\n",
+    "$volume = h (\\pi R^2 - \\pi r^2)$\n",
+    "\n",
+    "\n",
+    "<img src=\"assets/hollow-cylinder.png\"/>\n",
+    "\n",
+    "The first step is to consider how a function to calculate the volume of a hollow cylinder should look like in Python. \n",
+    "In other words, what are the **inputs** (parameters) and what is the **output** (return value)?\n",
+    "A first try is to write a function with three numbers, which represent the radius of\n",
+    "the two cylinders and their heights, the result is a floating-point value."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "def volume(outer_radius: int, inner_radius: int, height: int) -> float:\n",
+    "    \"\"\"\n",
+    "    Computers the volume of a hollow cylinder based on the radius \n",
+    "    of the outer and inner cylinder.\n",
+    "    :param outer_radius: outer radius of the cylinder\n",
+    "    :param inner_radius: inner radius of the cylinder\n",
+    "    :param height: height of the cylinder\n",
+    "    :returns volume of a hollow cylinder.\n",
+    "    \"\"\"\n",
+    "    return 0.0\n",
+    "\n",
+    "volume(3, 1, 3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "This function is obviously not correct, it does not calculate the value of a hollow cylinder, it just returns `0.0`.\n",
+    "However, we have now a skeleton of the function.\n",
+    "So, in the next step, we can start developing the body of the function.\n",
+    "\n",
+    "We need first to calculate the volume of a single cylinder based on the radius and\n",
+    "the height. \n",
+    "We introduce two auxiliary variables `surface_c1` and `surface_c2`.\n",
+    "Furthermore, we add a `print` statement to see whether the values make sense."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "\n",
+    "def volume(outer_radius: int, inner_radius: int, height: int) -> float:\n",
+    "    \"\"\"\n",
+    "    Computers the volume of a hollow cylinder based on the radius \n",
+    "    of the outer and inner cylinder.\n",
+    "    :param outer_radius: outer radius of the cylinder\n",
+    "    :param inner_radius: inner radius of the cylinder\n",
+    "    :param height: height of the cylinder\n",
+    "    :returns volume of a hollow cylinder.\n",
+    "    \"\"\"\n",
+    "    surface_c1: float = math.pi * outer_radius**2\n",
+    "    surface_c2: float = math.pi * inner_radius**2\n",
+    "    print('surface_c1 is', surface_c1)\n",
+    "    print('surface_c2 is', surface_c2)\n",
+    "    \n",
+    "    return 0.0\n",
+    "\n",
+    "volume(3, 1, 4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "The next step is to calculate the difference of the surfaces."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "\n",
+    "def volume(outer_radius: int, inner_radius: int, height: int) -> float:\n",
+    "    \"\"\"\n",
+    "    Computers the volume of a hollow cylinder based on the radius \n",
+    "    of the outer and inner cylinder.\n",
+    "    :param outer_radius: outer radius of the cylinder\n",
+    "    :param inner_radius: inner radius of the cylinder\n",
+    "    :param height: height of the cylinder\n",
+    "    :returns volume of a hollow cylinder.\n",
+    "    \"\"\"\n",
+    "    surface_c1: float = math.pi * outer_radius**2\n",
+    "    surface_c2: float = math.pi * inner_radius**2\n",
+    "    diff_surfaces = surface_c1 - surface_c2\n",
+    "    print('diff_surfaces is', diff_surfaces)\n",
+    "    \n",
+    "    return 0.0\n",
+    "\n",
+    "volume(3, 1, 4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "Then, we add a statement for multiplying the obtained difference with the height."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "\n",
+    "def volume(outer_radius: int, inner_radius: int, height: int) -> float:\n",
+    "    \"\"\"\n",
+    "    Computers the volume of a hollow cylinder based on the radius \n",
+    "    of the outer and inner cylinder.\n",
+    "    :param outer_radius: outer radius of the cylinder\n",
+    "    :param inner_radius: inner radius of the cylinder\n",
+    "    :param height: height of the cylinder\n",
+    "    :returns volume of a hollow cylinder.\n",
+    "    \"\"\"\n",
+    "    surface_c1: float = math.pi * outer_radius**2\n",
+    "    surface_c2: float = math.pi * inner_radius**2\n",
+    "    diff_surfaces: float = surface_c1 - surface_c2\n",
+    "    print('diff_surfaces is', diff_surfaces)\n",
+    "        \n",
+    "    return height * diff_surfaces\n",
+    "\n",
+    "volume(3, 1, 4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "The last step is to make check if the outer radius is smaller than the inner radius. Thus, we return `0` instead of a negative volume and print an error message."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "\n",
+    "def volume(outer_radius: int, inner_radius: int, height: int) -> float:\n",
+    "    \"\"\"\n",
+    "    Computers the volume of a hollow cylinder based on the radius \n",
+    "    of the outer and inner cylinder, using outer_radius >= inner_radius.\n",
+    "    :param outer_radius: outer radius of the cylinder\n",
+    "    :param inner_radius: inner radius of the cylinder\n",
+    "    :param height: height of the cylinder\n",
+    "    :returns volume of a hollow cylinder.\n",
+    "    \"\"\"\n",
+    "    if outer_radius >= inner_radius:\n",
+    "        surface_c1: float = math.pi * outer_radius**2\n",
+    "        surface_c2: float = math.pi * inner_radius**2\n",
+    "        diff_surfaces: float = surface_c1 - surface_c2\n",
+    "        \n",
+    "        volume_cylinder: float = height * diff_surfaces\n",
+    "    else:\n",
+    "        print(\"The outer cylinder should be larger than the inner cylinder\")\n",
+    "        \n",
+    "        volume_cylinder: float = 0\n",
+    "        \n",
+    "    return volume_cylinder\n",
+    "\n",
+    "volume(3, 1, 4)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-success\">\n",
+    "    <b>Do It Yourself!</b><br>\n",
+    "    Rewrite the else statement to an <b>assert</b> statement\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Remove this line and add your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-success\">\n",
+    "    <b>Do It Yourself!</b><br>\n",
+    "    Add at least two docstrings to test the <code>volume</code> function\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Remove this line and add your code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "The final version of the function does not display anything when it runs; it only returns a value or prints an error message.\n",
+    "The `print` statements we wrote are useful for debugging, but once you get the\n",
+    "function working, you should remove them. \n",
+    "A code like that is called **scaffolding** because it is helpful for building the program but is not part of the final product.\n",
+    "\n",
+    "When you get more experienced, you will add more statements in one run and use fewer debugging statements.\n",
+    "The key points of the incremental approach are:\n",
+    "\n",
+    "1. Start with a working program and make small incremental changes. At any point, if there is an error, you should have a good idea of where it is.\n",
+    "2. Use variables to hold intermediate values so you can display and check them.\n",
+    "3. Once the program is working, you might want to remove some of the scaffolding or\n",
+    "consolidate multiple statements into compound expressions, but only if it does not\n",
+    "make the program difficult to read."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## 10. Interface Design\n",
+    "\n",
+    "It may not be clear why it is worth the trouble to divide a program into functions. There\n",
+    "are several reasons:\n",
+    "\n",
+    "* Creating a new function gives you an opportunity to name a group of statements,\n",
+    "which makes your program easier to read and debug.\n",
+    "* Functions can make a program smaller by eliminating repetitive code. Later, if you\n",
+    "make a change, you only have to make it in one place.\n",
+    "* Dividing a long program into functions allows you to debug the parts one at a time\n",
+    "and then assemble them into a working whole.\n",
+    "* Well-designed functions are often useful for many programs. Once you write and\n",
+    "debug one, you can reuse it.\n",
+    "\n",
+    "The **interface** of a function is a summary of how it is used: \n",
+    "* What are the parameters and their types? \n",
+    "* What does the function do? \n",
+    "* What is the return value and its type, if any? \n",
+    "\n",
+    "An interface is “clean” if it allows the caller to do what they want without dealing with unnecessary details of\n",
+    "the body of the function.\n",
+    "A good interface can be defined by choosing a good name for the function and for its parameters and by providing the types of its arguments and result.\n",
+    "A short description, via comments, of the basic functionality of the function is also useful. This description can include the restrictions (so-called **pre-conditions**) for calling the function."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Summary\n",
+    "\n",
+    "**Testing** is essential to increase your confidence and trust in your programs.\n",
+    "In other words, it helps you validate that they are working as expected.\n",
+    "However, it is not bulletproof: tests only tell you about the existence of errors, not about their absence!\n",
+    "\n",
+    "Suppose you are implementing a banking application and you are in charge of developing the \"transfer money\" feature.\n",
+    "You need to ensure money goes to the right account, otherwise, the bank can have serious issues!\n",
+    "You first **developed a plan** to **incrementally build your program**.\n",
+    "You then **encapsulate** common functionality into functions.\n",
+    "For instance, a function that gets the current balance of an account, and another one that compares the balance against the amount that needs to be transfered, among others.\n",
+    "In parallel, you carefully **design the program interface** by identifying the **subproblems** that each function is addressing, their **inputs** (or parameters), their **outputs** (or return values), and the **algorithm** they implement (or the solution to the subproblem.\n",
+    "\n",
+    "Now, you need to check that this functionality is trustworthy!\n",
+    "You first manually test your code.\n",
+    "Then, you automate some of this testing by implementing a set of functions for using **`pytest`**. \n",
+    "(Mainly because you are working on a stand-alone project, otherwise, you would have used **`doctests`**.)\n",
+    "You consider the most vulnerable cases (to avoid catastrophic consequences for the bank), but you don't forget about the common cases.\n",
+    "In the end, you find some bugs, you improve your code, and the program is ready to be deployed in the production environment!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "This Jupyter Notebook is based on Chapter 4 of the book Python for Everybody and Chapters 3 and 6 of the book Think Python."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "# (End of Notebook)\n",
+    "\n",
+    "&copy; 2022-2023 - **TU/e** - Eindhoven University of Technology"
+   ]
+  }
+ ],
+ "metadata": {
+  "anaconda-cloud": {},
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  },
+  "vscode": {
+   "interpreter": {
+    "hash": "3aea9d04d643a3dad58bd6e15bcfdd921ab432a7c2b9a15d89f108cc0c05ed72"
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

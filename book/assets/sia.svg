@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="sia.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     showborder="false"
+     inkscape:zoom="0.61580177"
+     inkscape:cx="931.30618"
+     inkscape:cy="394.6075"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid48726" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       id="marker34525"
+       refX="5.0"
+       refY="3.0"
+       orient="auto-start-reverse"
+       inkscape:stockid="ExperimentalArrow"
+       inkscape:isstock="true">
+      <path
+         style="fill:context-stroke"
+         d="m 10,3 -10,3 0,-6 z"
+         id="path34523" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker34497"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path34495" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path34126" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleOutL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path34265" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path34144" />
+    </marker>
+    <marker
+       id="ExperimentalArrow"
+       refX="5.0"
+       refY="3.0"
+       orient="auto-start-reverse"
+       inkscape:stockid="ExperimentalArrow"
+       inkscape:isstock="true">
+      <path
+         style="fill:context-stroke"
+         d="m 10,3 -10,3 0,-6 z"
+         id="path34376" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker34497-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path34495-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker34497-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path34495-5" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ececec;stroke:none;stroke-width:0.287699;stroke-miterlimit:4.8;stroke-dasharray:none;stroke-opacity:1"
+       id="rect15550"
+       width="214.90887"
+       height="174.625"
+       x="86.716118"
+       y="29.104166"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="32.606537"
+       y="127.42915"
+       id="text16931"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan16929"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';baseline-shift:baseline;stroke-width:0.264583"
+         x="32.606537"
+         y="127.42915">l<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan45080">i</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-140.5437"
+       y="18.384096"
+       id="text16931-3"
+       transform="rotate(-90.316409)"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="-140.5437"
+         y="18.384096"
+         id="tspan55449">Library code</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-72.944763"
+       y="18.014336"
+       id="text16931-3-0"
+       transform="rotate(-90.956914)"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="-72.944763"
+         y="18.014336"
+         id="tspan55449-6">Client code</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.2889px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="272.41962"
+       y="47.609413"
+       id="text16931-3-0-2"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2889px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="272.41962"
+         y="47.609413"
+         id="tspan55449-6-6">Maracas</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect65122"
+       width="50.270832"
+       height="23.812508"
+       x="111.65419"
+       y="124.35416"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="136.64981"
+       y="138.18282"
+       id="text16931-3-8"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="136.64981"
+         y="138.18282"
+         id="tspan55449-7">∆-Analyzer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="135.3356"
+       y="47.311653"
+       id="text16931-3-8-4"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="135.3356"
+         y="47.311653"
+         id="tspan42988">API usage model</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="135.56325"
+       y="189.13388"
+       id="text16931-3-8-4-0"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="135.56325"
+         y="189.13388"
+         id="tspan42988-7">∆ model</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="245.39948"
+       y="189.16504"
+       id="text16931-3-8-4-0-8"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="245.39948"
+         y="189.16504"
+         id="tspan42988-7-6">Impact model</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="29.708881"
+       y="157.25928"
+       id="text16931-8"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan16929-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';baseline-shift:baseline;stroke-width:0.264583"
+         x="29.708881"
+         y="157.25928">l<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan37614">i+j</tspan></tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect65122-1"
+       width="50.271"
+       height="26.458345"
+       x="111.65419"
+       y="84.666649"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="137.70813"
+       y="95.849472"
+       id="text16931-3-8-2"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="137.70813"
+         y="95.849472"
+         id="tspan55449-7-9">API Usage </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="137.70813"
+         y="104.34032"
+         id="tspan7519">Analyzer</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect65122-1-3"
+       width="50.271"
+       height="26.458345"
+       x="220.13303"
+       y="103.18749"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="246.18712"
+       y="114.37032"
+       id="text16931-3-8-2-7"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="246.18712"
+         y="114.37032"
+         id="tspan55449-7-9-0">Impact </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="246.18712"
+         y="122.86117"
+         id="tspan7519-9">Analyzer</tspan></text>
+    <g
+       id="g21165"
+       transform="matrix(0.83333331,0,0,0.83333331,-18.592585,1.3923831)"
+       style="fill:#ffffff;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 187.85416,63.499999 5.29167,5.291667 v 15.875 h -15.875 V 63.499999 Z"
+         id="path21079" />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 193.14583,68.791666 h -5.29167 v -5.291667"
+         id="path21081" />
+    </g>
+    <path
+       d="m 136.52506,67.204164 v -0.988868 h -1.21829 v -3.243483 h -0.73571 v 1.028419 h -2.19134 v -2.491954 h 2.19134 v 0.988873 h 1.954 v -0.988873 h 2.18342 v 2.491954 h -2.18342 v -1.028419 h -0.74363 v 2.768825 h 0.74363 v -1.028427 h 2.18342 v 2.491953 z m -3.67068,-5.221225 v 1.542636 z m 4.14533,3.203934 v 1.542635 z m 0,-3.203934 v 1.542636 z m 0,1.542636 h 1.23411 v -1.542636 h -1.23411 z m 0,3.203933 h 1.23411 v -1.542635 h -1.23411 z m -4.14533,-3.203933 h 1.24201 v -1.542636 h -1.24201 z"
+       id="path835-2"
+       style="stroke-width:0.158219"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="33.254684"
+       y="74.581947"
+       id="text16931-36"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan16929-75"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';baseline-shift:baseline;stroke-width:0.264583"
+         x="33.254684"
+         y="74.581947">c</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 161.92507,97.895832 H 180.4459"
+       id="path20063"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 270.40424,116.41667 h 18.52083"
+       id="path20063-6"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 161.92507,135.99582 H 180.4459"
+       id="path20063-8"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 185.73757,93.927083 c 2.64583,1.322917 2.64583,1.322917 2.64583,3.96875 0,2.645837 0,2.645837 -2.64583,3.968747"
+       id="path20211"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 185.73757,132.29167 c 2.64583,1.32292 2.64583,1.32292 2.64583,3.96875 0,2.64584 0,2.64584 -2.64583,3.96875"
+       id="path20211-7"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 188.3834,136.26041 h 11.90625 V 119.0625 h 19.84375"
+       id="path20927"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g21165-7"
+       transform="matrix(0.83333331,0,0,0.83333331,90.928487,108.83201)"
+       style="fill:#ffffff;stroke-width:0.30000001;stroke-miterlimit:4.80000019;stroke-dasharray:none"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4.80000019;stroke-dasharray:none"
+         d="m 187.85416,63.499999 5.29167,5.291667 v 15.875 h -15.875 V 63.499999 Z"
+         id="path21079-5" />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4.80000019;stroke-dasharray:none"
+         d="m 193.14583,68.791666 h -5.29167 v -5.291667"
+         id="path21081-9" />
+    </g>
+    <path
+       d="m 246.04614,174.64388 v -0.98887 h -1.21829 v -3.24348 h -0.73571 v 1.02841 h -2.19134 v -2.49195 h 2.19134 v 0.98887 h 1.954 v -0.98887 h 2.18342 v 2.49195 h -2.18342 v -1.02841 h -0.74363 v 2.76882 h 0.74363 v -1.02843 h 2.18342 v 2.49196 z m -3.67068,-5.22123 v 1.54264 z m 4.14533,3.20394 v 1.54263 z m 0,-3.20394 v 1.54264 z m 0,1.54264 h 1.23411 v -1.54264 h -1.23411 z m 0,3.20393 h 1.23411 v -1.54263 h -1.23411 z m -4.14533,-3.20393 h 1.24201 v -1.54264 h -1.24201 z"
+       id="path835-2-3"
+       style="stroke-width:0.158219"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g26400"
+       transform="translate(-11.641655,20.637501)"
+       style="stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+         x="61.094234"
+         y="54.739815"
+         id="text16931-3-0-9"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+           x="61.094234"
+           y="54.739815"
+           id="tspan55449-6-7">{01}</tspan></text>
+      <g
+         id="g21165-7-2"
+         transform="matrix(0.83333331,0,0,0.83333331,-93.221521,-9.7013864)"
+         style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 187.85416,63.499999 5.29167,5.291667 v 15.875 h -15.875 V 63.499999 Z"
+           id="path21079-5-2" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 193.14583,68.791666 h -5.29167 v -5.291667"
+           id="path21081-9-8" />
+      </g>
+    </g>
+    <g
+       id="g26400-9"
+       transform="translate(-11.377083,73.289584)"
+       style="stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+         x="61.094234"
+         y="54.739815"
+         id="text16931-3-0-9-3"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+           x="61.094234"
+           y="54.739815"
+           id="tspan55449-6-7-1">{01}</tspan></text>
+      <g
+         id="g21165-7-2-9"
+         transform="matrix(0.83333331,0,0,0.83333331,-93.221521,-9.7013864)"
+         style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 187.85416,63.499999 5.29167,5.291667 v 15.875 h -15.875 V 63.499999 Z"
+           id="path21079-5-2-4" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 193.14583,68.791666 h -5.29167 v -5.291667"
+           id="path21081-9-8-7" />
+      </g>
+    </g>
+    <g
+       id="g26400-8"
+       transform="translate(-10.318749,103.18752)"
+       style="stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1;font-family:sans-serif;text-align:center;baseline-shift:baseline;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+         x="61.094234"
+         y="54.739815"
+         id="text16931-3-0-9-4"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none"
+           x="61.094234"
+           y="54.739815"
+           id="tspan55449-6-7-5">{01}</tspan></text>
+      <g
+         id="g21165-7-2-0"
+         transform="matrix(0.83333331,0,0,0.83333331,-93.221521,-9.7013864)"
+         style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 187.85416,63.499999 5.29167,5.291667 v 15.875 h -15.875 V 63.499999 Z"
+           id="path21079-5-2-3" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 193.14583,68.791666 h -5.29167 v -5.291667"
+           id="path21081-9-8-6" />
+      </g>
+    </g>
+    <g
+       id="g21165-2"
+       transform="matrix(0.83333331,0,0,0.83333331,-17.55068,108.83199)"
+       style="fill:#ffffff;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 187.85416,63.499999 5.29167,5.291667 v 15.875 h -15.875 V 63.499999 Z"
+         id="path21079-0" />
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 193.14583,68.791666 h -5.29167 v -5.291667"
+         id="path21081-2" />
+    </g>
+    <path
+       d="m 137.56699,174.64377 v -0.98887 h -1.21829 v -3.24348 h -0.73571 v 1.02842 h -2.19134 v -2.49196 h 2.19134 v 0.98888 h 1.954 v -0.98888 h 2.18342 v 2.49196 h -2.18342 v -1.02842 h -0.74363 v 2.76882 h 0.74363 v -1.02842 h 2.18342 v 2.49195 z m -3.67068,-5.22123 v 1.54264 z m 4.14533,3.20394 v 1.54263 z m 0,-3.20394 v 1.54264 z m 0,1.54264 h 1.23411 v -1.54264 h -1.23411 z m 0,3.20393 h 1.23411 v -1.54263 h -1.23411 z m -4.14533,-3.20393 h 1.24201 v -1.54264 h -1.24201 z"
+       id="path835-2-9"
+       style="stroke-width:0.158219"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 188.3834,97.895832 h 11.90625 v 17.197918 h 19.84375"
+       id="path21625"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 183.6209,95.25 V 14.817866"
+       id="path21627"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 183.88538,136.26041 v 79.87207"
+       id="path21629"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571"
+       width="7.9374933"
+       height="5.2916665"
+       x="179.91673"
+       y="201.08301"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571-1"
+       width="7.9374933"
+       height="5.2916665"
+       x="179.91673"
+       y="26.458313"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571-1-4"
+       width="7.9374986"
+       height="2.6458397"
+       x="107.68539"
+       y="88.635406"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571-1-4-7"
+       width="7.9375067"
+       height="2.6458397"
+       x="107.68539"
+       y="92.604164"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571-1-4-6"
+       width="7.9374986"
+       height="2.6458397"
+       x="107.68539"
+       y="128.32294"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571-1-4-7-5"
+       width="7.9375067"
+       height="2.6458397"
+       x="107.68539"
+       y="132.29169"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 286.80836,116.41667 h 28.161"
+       id="path26894"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path19942"
+       cx="183.571"
+       cy="97.965576"
+       r="3.0885868"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path19942-1"
+       cx="183.571"
+       cy="136.0656"
+       r="3.0885868"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path19942-0"
+       cx="284.64203"
+       cy="116.48641"
+       r="3.0885868"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path19942-0-0"
+       cx="316.92136"
+       cy="116.48643"
+       r="3.0885868"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path19942-0-0-1"
+       cx="183.49165"
+       cy="13.765986"
+       r="3.0885868"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path19942-0-0-1-5"
+       cx="183.90663"
+       cy="218.58763"
+       r="3.0885868"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571-1-4-69"
+       width="7.93751"
+       height="2.6458397"
+       x="216.16443"
+       y="107.15624"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571-1-4-7-3"
+       width="7.9375"
+       height="2.6458397"
+       x="216.16443"
+       y="111.125"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.80000019;stroke-dasharray:1,1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker34497)"
+       d="m 135.46674,148.16666 v 13.22917"
+       id="path34121"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.8;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker34497-2)"
+       d="m 245.26882,129.64583 v 31.75"
+       id="path34121-4"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.80000019;stroke-dasharray:1,1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker34497-7)"
+       d="m 135.48884,84.666647 -0.0221,-11.90623"
+       id="path34121-5"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker34497)"
+       d="m 57.414593,156.10416 14.022907,1e-5 v -15.875 h 39.6875"
+       id="path34758"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 55.5625,127 h 15.875 v 13.22917"
+       id="path34760"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker34497)"
+       d="m 56.091677,124.35417 15.345823,0 v -23.8125 h 39.6875"
+       id="path34762"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 56.091677,74.083332 15.345823,10e-7 v 26.458337"
+       id="path34892"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       sodipodi:nodetypes="ccc" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect26571-1-3"
+       width="7.9374933"
+       height="5.2916665"
+       x="112.44833"
+       y="-304.27072"
+       transform="rotate(89.999924)"
+       inkscape:export-filename="/home/lina/Documents/publications/maracas/sia.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

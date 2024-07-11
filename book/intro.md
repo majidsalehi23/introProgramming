@@ -1,0 +1,57 @@
+# Learning Python by doing
+
+<!-- ```{note}
+TODO: Missing introduction
+``` -->
+Welcome to the Learn Python by doing! In each of the chapters you can enable the Python field by clicking the icon at
+(1), and then "Live Code" (2):
+
+![img.png](assets/livecode.png)
+
+## Contributors
+<!-- ```{note}
+TODO: Update: check order and missing contributors
+``` -->
+
+* [Mark van den Brand](https://www.tue.nl/en/research/researchers/mark-van-den-brand/) (TU/e)
+* [Lina María Ochoa](https://lmove.github.io) (TU/e)
+* [Mazyar Seraj](https://maziarser.github.io/personal-website/) (TU/e)
+* [Mauricio Verano Merino](https://maveme.github.io) (VU Amsterdam)
+* [Tom Verhoeff](https://www.win.tue.nl/~wstomv/) (TU/e)
+* Gijs Walravens (TU/e)
+
+This book's content has been developed during the last five years, and it has been used for teaching different introductory courses at Dutch universities for different academic programs such as Computer Science, Data Science, and Artificial Intelligence.
+
+## Courses
+* Programming - JBI010 (joint bachelor Data Science, TU/Eindhoven & Tilburg University)
+* Introduction to Python Programming -  XB_0082 (bachelor Artificial Intelligence, VU Amsterdam)
+* Programming and Modelling - 2MBA30, TU/Eindhoven
+* Programming for Applied Physics - 31PAP, TU/Eindhoven
+
+
+[//]: # (-----------)
+
+[//]: # (## Table of Contents)
+
+[//]: # (```{tableofcontents})
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # ()
+[//]: # (-----------)
+
+[//]: # (## Bibliography)
+
+[//]: # (```{bibliography})
+
+[//]: # (:style: unsrtalpha)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (```{note})
+
+[//]: # (TODO: Missing license)
+
+[//]: # (```)

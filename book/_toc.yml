@@ -1,0 +1,29 @@
+format: jb-book
+options:
+  numbered: true
+parts:
+- caption: Chapters
+  chapters:
+  - file: Programs.ipynb
+  - file: Variables, Expressions, and Assignments.ipynb
+  - file: Conditionals.ipynb
+  - file: Strings.ipynb
+  - file: Lists.ipynb
+  - file: Iteration.ipynb
+  - file: Function Definition.ipynb
+  - file: Function Calls.ipynb
+  - file: Testing.ipynb
+  - file: Dictionaries.ipynb
+  - file: Files.ipynb
+  - file: Data Preparation.ipynb
+  - file: Tuples and Sets.ipynb
+  - file: Comprehensions and Generators.ipynb
+  - file: Regular Expressions.ipynb
+  - file: Exploratory Data Analysis (EDA).ipynb
+  - file: Classes and Objects.ipynb
+  - file: Classes and Methods.ipynb
+  - file: Classes and Methods Advanced.ipynb
+  - file: Inheritance.ipynb
+  - file: Recursion.ipynb
+  - file: Searching and Sorting.ipynb
+root: intro

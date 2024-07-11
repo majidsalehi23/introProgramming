@@ -1,0 +1,86 @@
+Display_Name;Portion_Amount;Portion_Display_Name;Meats;Calories;Vegetarian;Meal
+Sour cream dip;0,25;cup;0,000;133,65;yes;A
+Ice cream, regular;1;cup;0,000;267,33;yes;L
+Cheese (cheddar, Swiss);1;cubic inch;0,000;68,51;yes;A
+Cream cheese (regular);1;Tablespoon;0,000;50,605;yes;A
+Grilled steak (eat lean & fat);1;medium steak;6,748;516,12;no;D
+Grilled steak (eat lean only);1;medium steak;5,502;307,32;no;D
+BBQ short ribs with sauce;1;medium rib;0,935;107,61;no;D
+Ground beef (75% lean, regular);1;medium meatball;0,886;77,28;no;D
+Turkey breast lunch meat, fat free;1;ounce;0,988;23,52;no;L
+Tofu, firm;0,25;block (3 oz);0,000;56,7;yes;A
+Whole milk;1;cup;0,000;146,4;yes;A
+2% milk (reduced fat);1;cup;0,000;122;yes;A
+Buttermilk;1;cup;0,000;98;yes;A
+Plain yogurt, whole milk;1;8 oz container;0,000;138,47;yes;A
+Plain yogurt, fat free;1;8 oz container;0,000;127,12;yes;A
+Fruit yogurt, whole milk;1;6 oz container;0,000;202,3;yes;A
+Fruit yogurt, low fat;1;6 oz container;0,000;173,4;yes;A
+Fruit yogurt, fat-free sugar-free;1;6 oz container;0,000;86,7;yes;A
+Sour cream;1;individual container;0,000;64,2;yes;A
+Tea (unsweetened);1;teacup (cup = 6 fl oz);0,000;1,78;yes;A
+Soft drink, diet;1;small (drink = 16 fl oz);0,000;4,73;yes;L
+Soft drink, diet;1;medium (drink = 22 fl oz);0,000;6,5;yes;L
+Beer or ale;0,5;small pitcher;0,000;196,8;yes;D
+Lite beer;0,5;small pitcher;0,000;134,4;yes;D
+Sangria;1;drink (drink = 8 fl oz);0,000;164,16;yes;D
+Wheat cracker;4;Wheatsworth crackers;0,000;56;yes;L
+Bulgur, no fat added;0,5;cup, cooked;0,000;56;yes;D
+Couscous, no fat added;0,5;cup, cooked;0,000;87;yes;D
+Chocolate chips;0,25;cup;0,000;201,18;yes;L
+Snickers candy bar;1;bar (2 oz);0,750;273,03;no;L
+Coffee;1;coffee cup (cup = 6 fl oz);0,000;7,08;yes;A
+Tea (sweetened);1;teacup (cup = 6 fl oz);0,000;52,5;yes;A
+Italian dressing (oil & vinegar);1;Tablespoon;0,000;42,777;yes;D
+Mayonnaise, regular;1;Tablespoon;0,023;98,946;no;L
+White sugar (granulated or lump);1;teaspoon;0,000;16,254;yes;A
+Honey;1;Tablespoon;0,000;63,84;yes;B
+Jam or preserves;1;Tablespoon;0,000;54,6;yes;B
+Cooked eggplant;0,5;cup, diced;0,000;35;yes;A
+Cooked mushrooms;0,5;cup;0,000;21,84;yes;A
+Vegetable combo (Asian style);0,5;cup;0,000;23,495;yes;D
+Vegetable-pasta combo with cream sauce;0,5;cup;0,000;84,24;yes;D
+Onion rings;0,5;cup;0,012;43,92;no;D
+Tabasco sauce (hot sauce);10;drops;0,000;0,16;yes;D
+Cream of mushroom soup (made with milk);1;cup;0,000;190,96;yes;L
+French onion soup;1;cup;0,000;57,84;yes;L
+Vegetable soup;1;cup;0,000;81,94;yes;L
+Butter;1;pat (1 teaspoon);0,000;35,85;yes;A
+Light butter;1;pat (1 teaspoon);0,000;24,95;yes;A
+Raw tomatoes;1;wedge (1/4 of medium tomato);0,000;5,58;yes;A
+Cooked tomatoes;0,5;cup;0,000;21,6;yes;D
+Tomato juice;1;cup;0,000;41,31;yes;B
+Ketchup (catsup);1;Tablespoon;0,000;14,25;yes;A
+Salsa;0,25;cup;0,000;17,36;yes;A
+Mixed salad greens;1;cup, chopped or shredded;0,000;8,8;yes;L
+Coleslaw;0,5;cup;0,026;134,32;no;L
+Cooked asparagus;5;medium spears;0,000;16,5;yes;D
+Boiled potatoes;8;ounces raw;0,000;156,4;yes;D
+Roasted potatoes;1;medium (2 per pound, raw);0,000;179,47;yes;D
+Potato chips, regular (all flavors);1;single serving bag (1 oz);0,000;150,08;yes;L
+French fries, deep-fried;1;medium fast food order;0,000;456,94;yes;D
+Cooked broccoli;0,5;cup flowerets;0,000;16,975;yes;D
+Cooked carrots;0,5;cup baby carrots;0,000;26,075;yes;D
+Peach (canned in light syrup);0,5;cup;0,000;67,77;yes;L
+Strawberries (raw);0,5;cup, whole;0,000;23,04;yes;L
+Macaroni and cheese (homemade type);0,5;cup;0,000;236,925;yes;L
+Macaroni and cheese with beef;0,5;cup;1,012;167,67;no;L
+Macaroni salad;0,5;cup;0,019;169,92;no;L
+Macaroni salad with egg;0,5;cup;0,343;178,77;no;L
+Orange juice (100% juice);1;cup;0,000;104,58;yes;A
+Orange juice (sweetened);1;cup;0,000;130;yes;A
+Cheese pizza, thin crust;0,25;medium pizza;0,000;326,95;yes;L
+Cheese pizza, thick crust;0,25;medium pizza;0,000;405,405;yes;L
+Meat pizza, thin crust;0,25;medium pizza;0,404;415,3275;no;L
+Meat pizza, thick crust;0,25;medium pizza;0,314;485,87;no;L
+Rice with vegetables;0,5;cup;0,011;139,05;no;D
+Wrap sandwich (meat, vegetables, rice);1;wrap;2,914;818,37;no;L
+Lucky Charms cereal;1;single serving box;0,000;110,2;yes;B
+Raisin bran cereal;1;cup;0,000;194,59;yes;B
+Bacon;1;medium slice, cooked;0,181;43,28;no;A
+Fried chicken breast (no skin);1;medium breast;2,920;158,24;no;D
+Breakfast sausage (brown & serve);1;patty;0,669;106,92;no;B
+Baked fish;1;fillet;3,720;142,38;no;D
+Almonds;0,25;cup;2,487;203,745;no;A
+Croissant;1;medium croissant (2 oz);0,000;231,42;yes;B
+Peanut butter cookie;1;medium;0,306;76,32;no;L
