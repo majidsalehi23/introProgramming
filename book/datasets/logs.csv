@@ -1,0 +1,11 @@
+type,timestamp,from,to,message
+INFO,01-09-2020T07:44:11.144,bob@mail.nl,alice@mail.nl,Sending email
+INFO,01-09-2020T07:45:34.172,bob@mail.nl,alice@mail.nl,Receiving email
+INFO,01-09-2020T09:14:24.145,alice@mail.nl,bob@mail.nl,Sending email
+INFO,01-09-2020T09:15:11.100,alice@mail.nl,bob@mail.nl,Receiving email
+INFO,01-09-2020T11:23:11.123,bob@mail.nl,alice@mail.nl,Sending email
+ERROR,01-09-2020T11:23:56.170,bob@mail.nl,alice@mail.nl,Cannot send email
+INFO,01-09-2020T11:24:30.156,bob@mail.nl,alice@mail.nl,Retrying
+INFO,01-09-2020T11:25:20.120,bob@mail.nl,alice@mail.nl,Receiving email
+INFO,01-09-2020T14:14:14.144,alice@mail.nl,bob@mail.nl,Sending email
+INFO,01-09-2020T14:15:45.134,alice@mail.nl,bob@mail.nl,Receiving email

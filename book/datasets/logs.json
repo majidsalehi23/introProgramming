@@ -1,0 +1,72 @@
+[
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T07:44:11.144",
+        "from": "bob@mail.nl",
+        "to": "alice@mail.nl",
+        "message": "Sending email"
+    },
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T07:45:34.172",
+        "from": "bob@mail.nl",
+        "to": "alice@mail.nl",
+        "message": "Receiving email"
+    },
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T09:14:24.145",
+        "from": "alice@mail.nl",
+        "to": "bob@mail.nl",
+        "message": "Sending email"
+    },
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T09:15:11.100",
+        "from": "alice@mail.nl",
+        "to": "bob@mail.nl",
+        "message": "Receiving email"
+    },
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T11:23:11.123",
+        "from": "bob@mail.nl",
+        "to": "alice@mail.nl",
+        "message": "Sending email"
+    },
+    {
+        "type": "ERROR",
+        "timestamp": "01-09-2020T11:23:56.170",
+        "from": "bob@mail.nl",
+        "to": "alice@mail.nl",
+        "message": "Cannot send email"
+    },
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T11:24:30.156",
+        "from": "bob@mail.nl",
+        "to": "alice@mail.nl",
+        "message": "Retrying"
+    },
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T11:25:20.120",
+        "from": "bob@mail.nl",
+        "to": "alice@mail.nl",
+        "message": "Receiving email"
+    },
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T14:14:14.144",
+        "from": "alice@mail.nl",
+        "to": "bob@mail.nl",
+        "message": "Sending email"
+    },
+    {
+        "type": "INFO",
+        "timestamp": "01-09-2020T14:15:45.134",
+        "from": "alice@mail.nl",
+        "to": "bob@mail.nl",
+        "message": "Receiving email"
+    }
+]

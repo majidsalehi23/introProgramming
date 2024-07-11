@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logs>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T07:44:11.144</timestamp>
+		<from>bob@mail.nl</from>
+		<to>alice@mail.nl</to>
+		<message>Sending email</message>
+	</log>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T07:45:34.172</timestamp>
+		<from>bob@mail.nl</from>
+		<to>alice@mail.nl</to>
+		<message>Receiving email</message>
+	</log>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T09:14:24.145</timestamp>
+		<from>alice@mail.nl</from>
+		<to>bob@mail.nl</to>
+		<message>Sending email</message>
+	</log>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T09:15:11.100</timestamp>
+		<from>alice@mail.nl</from>
+		<to>bob@mail.nl</to>
+		<message>Receiving email</message>
+	</log>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T11:23:11.123</timestamp>
+		<from>bob@mail.nl</from>
+		<to>alice@mail.nl</to>
+		<message>Sending email</message>
+	</log>
+	<log>
+		<type>ERROR</type>
+		<timestamp>01-09-2020T11:23:56.170</timestamp>
+		<from>bob@mail.nl</from>
+		<to>alice@mail.nl</to>
+		<message>Cannot send email</message>
+	</log>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T11:24:30.156</timestamp>
+		<from>bob@mail.nl</from>
+		<to>alice@mail.nl</to>
+		<message>Retrying</message>
+	</log>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T11:25:20.120</timestamp>
+		<from>bob@mail.nl</from>
+		<to>alice@mail.nl</to>
+		<message>Receiving email</message>
+	</log>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T14:14:14.144</timestamp>
+		<from>alice@mail.nl</from>
+		<to>bob@mail.nl</to>
+		<message>Sending email</message>
+	</log>
+	<log>
+		<type>INFO</type>
+		<timestamp>01-09-2020T14:15:45.134</timestamp>
+		<from>alice@mail.nl</from>
+		<to>bob@mail.nl</to>
+		<message>Receiving email</message>
+	</log>
+</logs>
